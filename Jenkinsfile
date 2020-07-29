@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy Application') {
             steps {
-                bat 'mvn clean package deploy -Dmule.version=${mule.version} -Dusername=${anypoint.username} -Dpassword=${anypoint.password} -Denvironment=${cloudhub.environment} -Dworkers=${cloudhub.worker} -Dworker.type=MICRO -Dapplication.name=${cloudhub.app}-API -DmuleDeploy'
+                bat 'mvn clean package deploy -Dmule.version=4.3.0 -Dusername=Banchi -Dpassword=Aynu761555 -Denvironment=Sandbox -Dworkers=1 -Dworker.type=MICRO -Dapplication.name=hello-jenkins-API -DmuleDeploy'
             }
         }
     }
